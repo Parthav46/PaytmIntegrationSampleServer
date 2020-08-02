@@ -15,9 +15,12 @@ This repo consists of server side code for using [Paytm All-in-One SDK](https://
     - Firestore
     - Functions
     - Emulator (optional)
+
 ![Firebase CLI feature selection](./imgs/feature_selection.png)
-- Select the existing firebase project with Blaze Plan
+
+- Select the existing firebase project with Blaze Plan <br>
 ![Firebase project selection](./imgs/project_selection.png)
+
 - Setup Paytm merchant keys in Firebase functions config <br>
     `firebase functions:config:set paytm.mid="your-mid"` <br>
     `firebase functions:config:set paytm.key="your-key"` <br>
