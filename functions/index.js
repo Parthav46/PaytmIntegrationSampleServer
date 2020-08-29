@@ -24,8 +24,10 @@ exports.response = functions.https.onRequest((req, res) => {
                     txnDate: body.TXNDATE
                 });
             }
+            return 0;
         }).catch((err) => {
             console.log(err);
+            return 1;
         });
     }
     res.writeHead(200);
@@ -62,11 +64,16 @@ exports.checksum = functions.https.onRequest((req, res) => {
                 res.write(JSON.stringify(response));
                 res.end();
             });
+            return 0;
         } else {
             res.writeHead(200);
             res.write('{"checksum": "",\n "error": "User not found in database"}');
             console.log('{"checksum": "",\n "error": "User not found in database"}');
             res.end();
+            return 1;
         }
+    }).catch((err) => {
+        console.log(err);
+        return 1;
     });
 });
