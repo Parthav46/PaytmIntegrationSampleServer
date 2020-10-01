@@ -26,3 +26,8 @@ This repo consists of server side code for using [Paytm All-in-One SDK](https://
     `firebase functions:config:set paytm.key="your-key"` <br>
     `firebase functions:config:set paytm.website="WEBSTAGING"`
 
+## Contributing Guidelines:
+- Fork the repo to your account and then clone it on your machine
+- Make a separate branch for the changes you make with a meaningful name
+- Commit your changes to the branch
+- Make a Pull Request to [master](../../tree/master) with PR body containing description of changes you made and link to its issue.
