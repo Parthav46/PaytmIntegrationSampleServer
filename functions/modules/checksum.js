@@ -1,14 +1,15 @@
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');
-const checksum_lib = require('../checksum');
+const checksum_lib = require('../checksum/checksum');
 
-export default functions.https.onRequest((req, res) => {
+exports.checksum = (req, res) => {
     var body = "";
     body += req.rawBody;
 
     jsonBody = JSON.parse(body);
     customerID = jsonBody.userInfo.custId;
     orderID = jsonBody.orderId;
+    console.log(customerID);
 
     admin.database().ref("users/" + customerID).once("value").then((snap) => {
         if(snap.exists()) {
@@ -43,4 +44,4 @@ export default functions.https.onRequest((req, res) => {
         console.log(err);
         return 1;
     });
-});
+};

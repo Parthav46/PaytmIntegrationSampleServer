@@ -1,7 +1,7 @@
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 
-export default functions.https.onRequest((req, res) => {
+exports.response = (req, res) => {
     var body = req.body;
     copy = JSON.parse(JSON.stringify(body));
     delete copy.CHECKSUMHASH;
@@ -23,4 +23,4 @@ export default functions.https.onRequest((req, res) => {
     res.writeHead(200);
     res.write("OK");
     res.end();
-});
+};
