@@ -4,5 +4,5 @@ orbs:
 workflows:
   node-tests:
     jobs:
-      - node/test
-        app-dir: ~/functions
+      - node/test:
+          app-dir: ~/project/functions
