@@ -9,7 +9,7 @@ async function startServer () {
     app.use(test);
     app.listen(port, () => {
         console.log(`Server started! port: ${port}`);
-    })
+    });
 }
 
 startServer();
