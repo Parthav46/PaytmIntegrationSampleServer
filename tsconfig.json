@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+      "module": "CommonJS",
+      "alwaysStrict": true,
+      "noImplicitAny": true,
+      "preserveConstEnums": true,
+      "resolveJsonModule": true,
+      "esModuleInterop": true,
+      "sourceMap": true,
+      "outDir": "dist"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
