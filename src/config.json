@@ -1,6 +1,5 @@
 {
     "server": {
-        "port": 433,
-        "isHttps": true
+        "port": 433
     }
 }
