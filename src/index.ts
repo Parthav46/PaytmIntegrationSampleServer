@@ -4,8 +4,7 @@ import config from "./config.json";
 
 
 async function startServer () {
-
-    let port = config.server.port;
+    let port = process.env.PORT || 3000;
     let app = express();
     app.use(test);
     app.listen(port, () => {
