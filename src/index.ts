@@ -6,7 +6,10 @@ import config from "./config.json";
 async function startServer () {
     let port = process.env.PORT || 3000;
     let app = express();
+
+    // Add api modules to express server
     app.use(test);
+
     app.listen(port, () => {
         console.log(`Server started! port: ${port}`);
     });
